@@ -2795,6 +2795,25 @@ files = [
 ]
 
 [[package]]
+name = "pdbfixer"
+version = "1.9.0"
+description = ""
+optional = false
+python-versions = "*"
+files = []
+develop = false
+
+[package.dependencies]
+numpy = "*"
+openmm = ">=7.1"
+
+[package.source]
+type = "git"
+url = "https://github.com/openmm/pdbfixer.git"
+reference = "1.9"
+resolved_reference = "6bf10e138f6475f6f1850dae78d7bf1b420a1612"
+
+[[package]]
 name = "pexpect"
 version = "4.9.0"
 description = "Pexpect allows easy control of interactive console applications."
@@ -4029,4 +4048,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "cd6ddeae79180247467b8a4df590d95dd7541b111fd7ec2ba4741c725d402b09"
+content-hash = "fce5dca2a88874f0129f4af35eff642f9708747420b2c28b4c50368ef21c969d"
