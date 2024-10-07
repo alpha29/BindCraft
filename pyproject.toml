@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "bindcraft"
+version = "0.1.0"
+description = ""
+authors = ["cbrown <vanguard737@gmail.com>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+
+# looks like you have to add this before you can
+#   poetry add jax[cuda]
+# ...I think? see https://github.com/jorenham/jax_pep503
+[[tool.poetry.source]]
+name = "jorenham/jax_pep503"
+url = "https://jorenham.github.io/jax_pep503/"
+priority = "supplemental"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+biopython = "^1.84"
+scipy = "^1.14.1"
+numpy = "^2.1.2"
+pandas = "^2.2.3"
+seaborn = "^0.13.2"
+tqdm = "^4.66.5"
+jupyter = "^1.1.1"
+ffmpeg = "^1.4"
+openmm = "^8.1.1"
+typer = "^0.12.5"
+matplotlib = "^3.9.2"
+jax = {extras = ["cuda"], version = "^0.4.34"}
+pyrosetta-installer = "^0.1.1"
+colabdesign = {git = "https://github.com/sokrypton/ColabDesign.git", rev = "v1.1.2"}
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+isort = "^5.13.2"
+
+[tool.poetry.scripts]
+bindcraft = "bindcraft.cmd.root:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
