@@ -1,0 +1,11 @@
+name: bindcraft
+services:
+  conda:
+    image: continuumio/miniconda3
+    container_name: bindcraft
+    volumes:
+      - ~/workspace/BindCraft/:/root/BindCraft/
+    privileged: true
+    hostname: "bindcraft"
+    command: tail -F anything
+    working_dir: /root/BindCraft/
