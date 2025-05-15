@@ -36,6 +36,8 @@ dist/
 *.tar.gz
 *.sql.gz
 *.bak
+*.tar
+*.aria2
 
 
 # Sphinx documentation #
@@ -64,3 +66,7 @@ db_dumps/*.json
 log/
 data/
 .aider*
+
+# AF2 params        #
+#####################
+params
