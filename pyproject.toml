@@ -19,3 +19,18 @@ dependencies = [
 [tool.uv.sources]
 colabdesign = { git = "https://github.com/sokrypton/ColabDesign.git" }
 pyrosetta = { url = "https://west.rosettacommons.org/pyrosetta/release/release/PyRosetta4.Release.python312.ubuntu.wheel/pyrosetta-2025.19+release.1354d05daa-cp312-cp312-linux_x86_64.whl" }
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "isort>=6.0.1",
+    "ruff>=0.11.10",
+]
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 88
